@@ -1,0 +1,347 @@
+/*Black bar*/
+.header__blackbar,
+.header__blackbar_link {
+	padding: 16.8px 0;
+
+	background-color: #00122f;
+	color: white;
+
+	font-size: 15.5px;
+}
+
+.header__blackbar_link {
+  padding: 0;
+  border-bottom: 1px solid #fff;
+}
+
+
+
+
+/*Шапка*/
+.header {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 40px;
+	color: #91919f;
+}
+
+.header__mobile_logo-name {
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 0 0 3px;
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.3;
+}
+
+.header__city_name {
+	border-bottom: 1px dashed #448ccb;
+	color: #448ccb;
+}
+
+.header__city_arrow {
+	width: 9px;
+	height: 5px;
+	margin: 4px;
+}
+
+.header__date {
+	display: inline-block;
+}
+
+.header__time {
+	padding-left: 25px;
+	background-image: url('img/icon-time.png');
+	background-repeat: no-repeat;
+}
+
+.header__degree {
+	padding-left: 37px;
+	background-image: url('img/cloudy2.png');
+	background-repeat: no-repeat;
+	background-position-y: -2px;
+}
+
+.header__search_form {
+	position: relative;
+}
+
+.header__search_box {
+	width: 320px;
+	height: 45px;
+	padding-left: 21px;
+	border-radius: 22px;
+	border: none;
+	outline: none;
+	background-color: #f3f3f3;
+	font-size: 14px;
+}
+
+.header__search_btn {
+	position: absolute;
+	top: 7px;
+	right: 9px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-image: url('img/search.png');
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.header__mobile_btn-search {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-image: url('img/search.png');
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.header__mobile,
+.header__mobile_menu {
+	display: none;
+}
+
+
+
+
+/*Меню*/
+.header__burger_line {
+	display: block;
+	width: 19px;
+	height: 2.5px;
+	background-color: #000;
+}
+.header__burger_line:nth-child(2n) {
+	margin: 4px 0;
+}
+
+.header__menu_btn-close {
+	display: none;
+	align-self: flex-end;
+	margin-bottom: 50px;
+}
+
+.header__menu_btn-closeline {
+	display: block;
+	transform-origin: 38% 55% 0;
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+}
+.header__menu_btn-closeline:first-child {
+	transform: rotate(45deg);
+}
+.header__menu_btn-closeline:last-child {
+	transform: rotate(-45deg);
+	margin-bottom: 5px;
+}
+
+.header__menu_container {
+	padding: 32px 0 29px;
+}
+
+.header__menu_item::after {
+	content: "/";
+	display: inline-block;
+	margin: 0 20px;
+	color: #e1e1e5;
+}
+.header__menu_item:last-child::after {
+	display: none;
+}
+
+
+
+
+/*Курс валют*/
+.header__currency_container {
+	width: 100%;
+	margin: -10px 0 10px;
+}
+
+.header__currency {
+	background-color: #e4e4e4;
+	box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
+}
+
+.header__currency_btn {
+	padding: 0 12px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: inherit;
+	color: #448ccb;
+}
+
+.header__currency_list {
+	display: inline-block;
+	border-left: 1px solid #448ccb;
+}
+
+.header__currency_item {
+	display: inline-block;
+	margin: 20px;
+}
+
+
+
+
+/*Media*/
+@media screen and (max-width: 1200px) {
+	.flex-container {
+		flex-wrap: wrap;
+	}
+	.fixed-container {
+		width: 750px;
+	}
+	.header__search_box {
+		width: 175px;
+	}
+	.header__menu_item::after {
+		margin: 0 5px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.fixed-container {
+		width: 100%;
+		padding-top: 0;
+	}
+	.header {
+		box-shadow: none;
+	}
+	.header__blackbar {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.header__container {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	.header__menu_container,
+	.header__container {
+		display: none;
+	}
+	.header__menu_container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 50;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,18,47,.95);
+	}
+	.header__menu_list {
+		display: block;
+		text-align: center;
+	}
+	.header__menu_btn-close {
+		margin: 30px;
+	}
+	.header__menu_item {
+		color: #fff;
+		font-size: 24px;
+		line-height: 1.8;
+	}
+	.header__menu_item::after {
+		content: "";
+	}
+	.header__menu_item:last-child::after {
+		display: inline-block;
+	}
+	.menu-open {
+		display: block;
+	}
+	.header__mobile_menu,
+	.header__mobile {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		padding: 16px 0;
+		color: #91919f;
+	}
+	.header__mobile {
+		padding: 30px 0;
+		background-color: #f9f9f9;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.header__datetime {
+		display: none;
+	}
+	.header__currency {
+		display: flex;
+		flex-direction: column;
+	}
+	.header__currency_btn {
+		height: 50px;
+	}
+	.header__currency_list {
+		display: flex;
+		justify-content: center;
+		border-top: 1px solid #448ccb;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.header__blackbar,
+	.header__blackbar_link {
+		font-size: 11.9px;
+	}
+	.header__blackbar_text {
+		padding-left: 20px;
+	}
+	.header__mobile_menu {
+		height: 50px;
+	}
+	.header__mobile {
+		height: 90px;
+	}
+	.header__mobile_logo-img {
+		width: 23px;
+	}
+	.header__mobile_logo-name {
+		margin: 4px 0 0 0;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.header__mobile_logo {
+		margin: 5px 0 0 0;
+	}
+	.header__mobile_logo-img {
+		margin-right: 6px;
+	}
+	.header__mobile_logo-name {
+		font-size: 13px;
+	}
+	.header__mobile {
+		height: 101px;
+	}
+	.header__time,
+	.header__degree {
+		line-height: 1.1;
+	}
+	.header__menu_list {
+		margin-top: -25px;
+	}
+}
